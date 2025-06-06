@@ -24,10 +24,12 @@ body {
 }
 
 .logo img {
-  height: 200px;
+  height: auto;
+  max-height: 60px;
   width: auto;
   display: block;
 }
+
 
 /* === Menu === */
 .menu a {
