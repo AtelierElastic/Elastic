@@ -5,12 +5,22 @@
   box-sizing: border-box;
 }
 
-/* === Base Styling === */
+/* === Base Page Styling === */
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #ffffff;
+  background-image: url("background.jpg"); /* Make sure this file is uploaded */
+  background-size: cover;
+  background-repeat: repeat;
   color: #222;
   line-height: 1.5;
+}
+
+/* === Layout Wrapper for Consistent Margins === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* === Header === */
@@ -18,13 +28,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #ccc;
   background-color: #fff;
 }
 
 .logo img {
   height: 70px;
+  max-height: 70px;
   width: auto;
   display: block;
 }
@@ -36,56 +47,11 @@ body {
   font-weight: 500;
   font-size: 1rem;
   color: #333;
+  transition: color 0.3s ease;
 }
 
 .menu a:hover {
-  opacity: 0.6;
-}
-
-/* === Page Headings and Paragraphs === */
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-p {
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-/* === About Page === */
-.about-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #333;
-}
-
-.about-text p {
-  margin-bottom: 1.5rem;
-  text-align: left;
-}
-
-.about-text a {
-  color: #333;
-  text-decoration: underline;
-}
-
-.about-image {
-  text-align: center;
-}
-
-.about-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  color: #4c59e3; /* Blue hover */
 }
 
 /* === Filter Menu === */
@@ -94,7 +60,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 2rem 2rem 1rem;
+  margin: 2rem 0 1rem;
   padding: 0;
   justify-content: flex-start;
   font-size: 1.05rem;
@@ -118,16 +84,12 @@ p {
 }
 
 /* === Gallery === */
-  .gallery {
+.gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* fixed: 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* Always 3 items per row */
   gap: 3rem;
-  padding: 2rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  margin: 3rem 0;
 }
-
-
 
 .project-thumb {
   display: flex;
@@ -152,10 +114,22 @@ p {
   height: auto;
   object-fit: cover;
   border-radius: 0;
-  aspect-ratio: 6.5 / 3.5;
+  aspect-ratio: 5 / 4.5;
 }
 
 .project-thumb p {
   margin-top: 1rem;
   font-size: 0.9rem;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  #filter-menu {
+    justify-content: center;
+  }
 }
