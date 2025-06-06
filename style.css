@@ -29,3 +29,7 @@ body {
 .menu a:hover {
   text-decoration: underline;
 }
+.logo img {
+  height: 60px;
+  display: block;
+}
