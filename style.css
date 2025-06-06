@@ -143,6 +143,6 @@ body::before {
   background-image: url("background.png");
   background-size: cover;
   background-repeat: repeat;
-  opacity: 20; /* ← adjust this number for more/less transparency */
+  opacity: 0.08; /* ← adjust this number for more/less transparency */
   z-index: -1;
 }
