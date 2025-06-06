@@ -17,30 +17,66 @@
     </nav>
   </header>
 
-  <main>
-    <div class="filter-menu">
-      <button class="active">All</button>
-      <button>Research</button>
-      <button>Cartography & Territorial Studies</button>
-      <button>Architectural Imagery</button>
-      <button>Design Projects</button>
-    </div>
+  <!-- FILTER BUTTONS -->
+  <ul id="filter-menu">
+    <li class="active" data-filter="all">All</li>
+    <li data-filter="data-illustrations">Research</li>
+    <li data-filter="critical-cartography">Cartography & Territorial Studies</li>
+    <li data-filter="architecture-visuals">Architectural Imagery</li>
+    <li data-filter="design-studies">Design Projects</li>
+  </ul>
 
-    <section class="gallery">
-      <div class="item">
-        <img src="petite-maison.jpg" alt="Petite Maison" />
-        <p>Petite Maison</p>
-      </div>
-      <div class="item">
-        <img src="halle-des-soufflantes.png" alt="Halle des Soufflantes" />
-        <p>Halle des Soufflantes</p>
-      </div>
-      <div class="item">
-        <img src="from-scan-to-bim.png" alt="From Scan to BIM" />
-        <p>From Scan to BIM</p>
-      </div>
-      <!-- You can add more items here -->
-    </section>
-  </main>
+  <!-- PROJECT GALLERY -->
+  <div class="gallery">
+    <a class="project-thumb design-studies data-illustrations" href="#">
+      <img src="petite-maison.jpg" alt="Petite Maison" />
+      <p>Petite Maison</p>
+    </a>
+
+    <a class="project-thumb architecture-visuals data-illustrations" href="#">
+      <img src="halle-des-soufflantes.jpg" alt="Halle des Soufflantes" />
+      <p>Halle des Soufflantes</p>
+    </a>
+
+    <a class="project-thumb data-illustrations" href="#">
+      <img src="from-scan-to-bim.jpg" alt="From Scan to BIM" />
+      <p>From Scan to BIM</p>
+    </a>
+
+    <a class="project-thumb data-illustrations critical-cartography" href="#">
+      <img src="pollinators.jpg" alt="Biodiversity: Pollinators" />
+      <p>Territorial Studies for Biodiversity: Pollinators</p>
+    </a>
+
+    <a class="project-thumb architecture-visuals design-studies" href="#">
+      <img src="house-in-livezi.jpg" alt="House in Livezi" />
+      <p>House in Livezi</p>
+    </a>
+  </div>
+
+  <!-- FILTER SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuItems = document.querySelectorAll('#filter-menu li');
+      const galleryItems = document.querySelectorAll('.gallery .project-thumb');
+
+      menuItems.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+
+          menuItems.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          galleryItems.forEach(item => {
+            if (filter === 'all') {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = item.classList.contains(filter) ? 'flex' : 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
