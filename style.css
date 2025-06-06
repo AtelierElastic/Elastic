@@ -118,14 +118,15 @@ p {
 }
 
 /* === Gallery === */
-.gallery {
+  .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* larger thumbnails */
-  gap: 2rem;
-  padding: 1rem 1.5rem;         /* less space around the sides */
-  max-width: 95vw;              /* stretch to nearly full width */
+  grid-template-columns: repeat(3, 1fr); /* fixed: 3 columns */
+  gap: 3rem;
+  padding: 2rem 3rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
+
 
 
 .project-thumb {
