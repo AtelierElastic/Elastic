@@ -120,12 +120,13 @@ p {
 /* === Gallery === */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
-  padding: 2rem;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* larger thumbnails */
+  gap: 2rem;
+  padding: 1rem 1.5rem;         /* less space around the sides */
+  max-width: 95vw;              /* stretch to nearly full width */
   margin: 0 auto;
 }
+
 
 .project-thumb {
   display: flex;
