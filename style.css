@@ -101,3 +101,27 @@ p {
   color: #333;
 }
 
+.about-content {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-content p {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.about-content a {
+  color: #333;
+  text-decoration: underline;
+}
