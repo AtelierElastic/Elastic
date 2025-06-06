@@ -30,7 +30,6 @@ body {
   display: block;
 }
 
-
 /* === Menu === */
 .menu a {
   margin-left: 2rem;
@@ -44,7 +43,7 @@ body {
   opacity: 0.6;
 }
 
-/* === Content Section (Placeholder) === */
+/* === Content Section === */
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -55,4 +54,3 @@ p {
   text-align: center;
   margin-top: 0.5rem;
 }
-
