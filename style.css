@@ -76,7 +76,6 @@ p {
   font-weight: bold;
 }
 
-/* === Gallery Layout === */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -101,3 +100,4 @@ p {
   font-size: 0.9rem;
   color: #333;
 }
+
