@@ -54,3 +54,50 @@ p {
   text-align: center;
   margin-top: 0.5rem;
 }
+/* === Filter Menu === */
+.filter-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.filter-menu button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filter-menu .active {
+  border-color: #222;
+  font-weight: bold;
+}
+
+/* === Gallery Layout === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.item p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
