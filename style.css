@@ -30,9 +30,9 @@ body {
   text-decoration: underline;
 }
 .site-header .logo img {
-  height: 20px;
+  height: 5px;
   width: auto;
-  max-height: 20px;
+  max-height: 5px;
   display: block;
 }
 
