@@ -114,7 +114,7 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 0;
-  aspect-ratio: 6 / 4;
+  aspect-ratio: 6 / 4.5;
 }
 
 .project-thumb p {
