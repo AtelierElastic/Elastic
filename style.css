@@ -1,7 +1,7 @@
 /* === Reset === */
 * {
-  margin: 2;
-  padding: 2;
+  margin: 5;
+  padding: 5;
   box-sizing: border-box;
 }
 
@@ -19,8 +19,8 @@ body {
 /* === Layout Wrapper for Consistent Margins === */
 .container {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  margin: 5 auto;
+  padding: 0 5rem;
 }
 
 /* === Header === */
