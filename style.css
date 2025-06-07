@@ -38,14 +38,16 @@ body::before {
 }
 
 /* === Header === */
-.site-header {
+
+  .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid #ccc;
-  background-color: white;
+  background-color: transparent; /* ensure transparency */
 }
+
 
 .logo img {
   height: 70px;
