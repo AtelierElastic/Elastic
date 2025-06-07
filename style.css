@@ -48,17 +48,19 @@ body::before {
 }
 
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
 .menu a {
-  display: block;
-  margin-bottom: 0.5rem;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
   color: #000;
-}
-
-.menu a:hover {
-  color: #4c59e3;
 }
 
 /* === Filter Menu === */
