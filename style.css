@@ -1,13 +1,19 @@
-/* === Background Setup === */
+/* === Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #111;
   position: relative;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  background: transparent;
 }
 
+/* === Transparent Background Image === */
 body::before {
   content: "";
   position: fixed;
@@ -22,7 +28,7 @@ body::before {
   z-index: -1;
 }
 
-/* === Page Layout === */
+/* === Container === */
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -47,7 +53,7 @@ body::before {
   display: block;
 }
 
-
+/* === Navigation === */
 .menu {
   display: flex;
   flex-direction: column;
@@ -63,13 +69,17 @@ body::before {
   color: #000;
 }
 
+.menu a:hover {
+  color: #4c59e3;
+}
+
 /* === Filter Menu === */
 #filter-menu {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: -5rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   padding: 0;
   justify-content: left;
@@ -135,7 +145,7 @@ body::before {
   text-align: center;
 }
 
-/* === Mobile Styles === */
+/* === Mobile Responsive === */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr;
@@ -161,12 +171,11 @@ body::before {
     padding: 0.4rem 0.6rem;
   }
 
-  nav a {
-    font-size: 0.9rem !important;
+  .site-title img {
+    height: 50px;
   }
 
-  .site-title img {
-    width: 180px !important;
-    height: auto;
+  .menu a {
+    font-size: 0.9rem !important;
   }
 }
