@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   position: relative;
   min-height: 100vh;
-  background-color: #e0e0e0; /* fallback grey */
+  /* REMOVE background-color to make it transparent */
 }
 
 /* === Transparent Background Layer === */
@@ -26,7 +26,7 @@ body::before {
   background-image: url("background.png");
   background-size: contain;
   background-repeat: repeat;
-  opacity: 0.08; /* ← adjust this for more/less transparency */
+  opacity: 0.08; /* ← adjust this for more/less visibility */
   z-index: -1;
 }
 
@@ -34,7 +34,7 @@ body::before {
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem; /* reduced side margins */
 }
 
 /* === Header === */
@@ -44,7 +44,7 @@ body::before {
   align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid #ccc;
-  background-color: #fff;
+  background-color: white;
 }
 
 .logo img {
@@ -144,4 +144,3 @@ body::before {
     justify-content: center;
   }
 }
-
