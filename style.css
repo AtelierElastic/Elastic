@@ -1,21 +1,13 @@
-/* === Reset === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* === Base Page Styling === */
+/* === Background Setup === */
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #222;
-  line-height: 1.5;
+  color: #111;
   position: relative;
   min-height: 100vh;
-  /* REMOVE background-color to make it transparent */
+  margin: 0;
+  padding: 0;
 }
 
-/* === Transparent Background Layer === */
 body::before {
   content: "";
   position: fixed;
@@ -26,43 +18,39 @@ body::before {
   background-image: url("background.png");
   background-size: contain;
   background-repeat: repeat;
-  opacity: 0.08; /* ← adjust this for more/less visibility */
+  opacity: 0.08;
   z-index: -1;
 }
 
-/* === Page Wrapper for Margins === */
+/* === Page Layout === */
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* reduced side margins */
+  padding: 0 1rem;
 }
 
 /* === Header === */
-
-  .site-header {
+.site-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 1.5rem 0;
-  border-bottom: 1px solid #ccc;
-  background-color: transparent; /* ensure transparency */
+  border-bottom: 1px solid #999;
+  background: transparent;
 }
 
-
-.logo img {
-  height: 70px;
-  width: auto;
-  display: block;
+.site-title img {
+  height: auto;
+  width: 200px;
 }
 
-/* === Menu === */
 .menu a {
-  margin-left: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  color: #333;
-  transition: color 0.3s ease;
+  color: #000;
 }
 
 .menu a:hover {
@@ -75,13 +63,16 @@ body::before {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 2rem 0 1rem;
+  margin-top: -5rem;
+  margin-bottom: 1rem;
   padding: 0;
+  justify-content: left;
   font-size: 1.05rem;
 }
 
 #filter-menu li {
   padding: 0.5rem 0.7rem;
+  border: 0px solid #4c59e3;
   border-radius: 50px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s ease;
@@ -92,17 +83,17 @@ body::before {
 }
 
 #filter-menu li.active {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border: 1px solid #4c59e3;
-  color: #000;
+  color: #000000;
 }
 
 /* === Gallery === */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  margin: 3rem 0;
+  gap: 5rem;
+  margin-top: 3rem;
 }
 
 .project-thumb {
@@ -110,6 +101,7 @@ body::before {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease;
@@ -127,22 +119,48 @@ body::before {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 0;
   aspect-ratio: 5 / 4.5;
 }
 
 .project-thumb p {
   margin-top: 1rem;
   font-size: 0.9rem;
+  text-align: center;
 }
 
-/* === Responsive Adjustments === */
+/* === Mobile Styles === */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  .project-thumb p {
+    font-size: 0.7rem;
+    margin-top: 0.75rem;
+  }
+
   #filter-menu {
     justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 0.85rem !important;
+    margin-top: 0.5rem;
+  }
+
+  #filter-menu li {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 0.6rem;
+  }
+
+  nav a {
+    font-size: 0.9rem !important;
+  }
+
+  .site-title img {
+    width: 180px !important;
+    height: auto;
   }
 }
