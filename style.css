@@ -18,7 +18,7 @@ body {
 
 /* === Layout Wrapper for Consistent Margins === */
 .container {
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 2rem;
 }
