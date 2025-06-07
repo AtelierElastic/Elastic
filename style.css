@@ -34,13 +34,15 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #999;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0 2rem;
+  border-bottom: 1px solid #ccc;
   background: transparent;
 }
 
 .site-title img {
-  height: 150px;
+  height: 60px;
   width: auto;
   display: block;
 }
