@@ -18,7 +18,7 @@ body {
 
 /* === Layout Wrapper for Consistent Margins === */
 .container {
-  max-width: 100px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -114,7 +114,7 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 0;
-  aspect-ratio: 10 / 4;
+  aspect-ratio: 6 / 4;
 }
 
 .project-thumb p {
