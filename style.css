@@ -40,9 +40,11 @@ body::before {
 }
 
 .site-title img {
-  height: auto;
-  width: 70px;
+  height: 70px;
+  width: auto;
+  display: block;
 }
+
 
 .menu a {
   display: block;
